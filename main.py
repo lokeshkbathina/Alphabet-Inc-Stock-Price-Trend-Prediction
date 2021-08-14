@@ -66,7 +66,7 @@ regressor.add(Dropout(0.2))
 regressor.add(Dense(units = 1))
 regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
-model = regressor.fit(ip_train, op_train, epochs = 100, batch_size = 32)
+regressor.fit(ip_train, op_train, epochs = 100, batch_size = 32)
 
 regressor.save("lstm_rnn_model.h5")
 print("Saved model to disk")
